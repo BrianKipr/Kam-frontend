@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import SideNav from '../../ui/Sidenav';
 
 // Mock functions to simulate data fetching
 const fetchRevenue = async () => {
@@ -58,7 +57,6 @@ export default function Dashboard() {
 
   return (
     <div className="flex">
-      <SideNav />
       <main className="flex-grow p-4">
         <h1 className={`mb-4 text-xl md:text-2xl`}>
           Dashboard
