@@ -1,12 +1,11 @@
 import React from 'react';
 import clsx from 'clsx';
-import { useLocation } from 'react-router-dom'; // For React Router
+import { useLocation, Link } from 'react-router-dom';
 
-// Map of links to display in the side navigation.
 const links = [
-  { name: 'Home', href: '/dashboard' },
-  { name: 'Invoices', href: '/dashboard/invoices' },
-  { name: 'Customers', href: '/dashboard/customers' },
+  { name: 'Summary', href: '/dashboard/' },
+  { name: 'Imports', href: '/dashboard/imports' },
+  { name: 'Exports', href: '/dashboard/exports' },
 ];
 
 export default function NavLinks() {
@@ -15,9 +14,9 @@ export default function NavLinks() {
   return (
     <>
       {links.map((link) => (
-        <a
+        <Link
           key={link.name}
-          href={link.href}
+          to={link.href}
           className={clsx(
             'flex h-[48px] items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3',
             {
@@ -25,9 +24,8 @@ export default function NavLinks() {
             },
           )}
         >
-          {/* No icon to render */}
           <p className="hidden md:block">{link.name}</p>
-        </a>
+        </Link>
       ))}
     </>
   );
