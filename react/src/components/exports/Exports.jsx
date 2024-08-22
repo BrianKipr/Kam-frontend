@@ -1,12 +1,24 @@
 import React from 'react';
+import Tableauviz from '../tableauviz/Tableauviz'; // Adjust the path based on your project structure
 
 export default function Exports() {
-  // Here you would fetch and display exports data
   return (
-    <div>
-      <h1>Exports</h1>
-      {/* Add your exports content here */}
-      <p>This is the exports page.</p>
+    <div className="p-4">
+      <h1 className="text-2xl font-bold mb-6">Exports</h1>
+      <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="p-4 bg-gray-300 rounded-lg">
+          <h2 className='capitalize text-xl font-semibold mb-4'>
+            Distribution of Exports By Products
+          </h2>
+          <Tableauviz />
+        </div>
+        <div className="p-4 bg-gray-300 rounded-lg">
+          <h2 className='capitalize text-xl font-semibold mb-4'>
+            Distribution of Imports By Products
+          </h2>
+          <Tableauviz />
+        </div>
+      </div>
     </div>
   );
 }
