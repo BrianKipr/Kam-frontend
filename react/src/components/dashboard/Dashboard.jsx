@@ -19,10 +19,11 @@ const fetchLatestInvoices = async () => {
 const fetchCardData = async () => {
   return new Promise((resolve) =>
     setTimeout(() => resolve({
-      numberOfInvoices: 120,
-      numberOfCustomers: 50,
-      totalPaidInvoices: 10000,
-      totalPendingInvoices: 2500,
+      HsCodes: 120,
+      Countries: 50,
+      Products: 10000,
+      Exports: 2500,
+      Imports: 2500,
     }), 1000)
   );
 };
@@ -31,10 +32,11 @@ export default function Dashboard() {
   const [revenue, setRevenue] = useState(null);
   const [latestInvoices, setLatestInvoices] = useState(null);
   const [cardData, setCardData] = useState({
-    numberOfInvoices: 0,
-    numberOfCustomers: 0,
-    totalPaidInvoices: 0,
-    totalPendingInvoices: 0,
+    HsCodes: 0,
+    Countries: 0,
+    Products: 0,
+    Exports: 0,
+    Imports: 0,
   });
 
   useEffect(() => {
@@ -58,25 +60,29 @@ export default function Dashboard() {
   return (
     <div className="flex">
       <main className="flex-grow p-4">
-        <h1 className={`mb-4 text-xl md:text-2xl`}>
+        <h1 className="mb-4 text-xl md:text-2xl">
           Dashboard
         </h1>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           <div className="flex flex-col items-center justify-center p-4 bg-gray-200 rounded-lg">
-            <h2>Collected</h2>
-            <p>{cardData.totalPaidInvoices}</p>
+            <h2>Hs Codes</h2>
+            <p>{cardData.HsCodes}</p>
           </div>
           <div className="flex flex-col items-center justify-center p-4 bg-gray-200 rounded-lg">
-            <h2>Pending</h2>
-            <p>{cardData.totalPendingInvoices}</p>
+            <h2>Countries</h2>
+            <p>{cardData.Countries}</p>
           </div>
           <div className="flex flex-col items-center justify-center p-4 bg-gray-200 rounded-lg">
-            <h2>Total Invoices</h2>
-            <p>{cardData.numberOfInvoices}</p>
+            <h2>Products</h2>
+            <p>{cardData.Products}</p>
           </div>
           <div className="flex flex-col items-center justify-center p-4 bg-gray-200 rounded-lg">
-            <h2>Total Customers</h2>
-            <p>{cardData.numberOfCustomers}</p>
+            <h2>Exports</h2>
+            <p>{cardData.Exports}</p>
+          </div>
+          <div className="flex flex-col items-center justify-center p-4 bg-gray-200 rounded-lg">
+            <h2>Imports</h2>
+            <p>{cardData.Imports}</p>
           </div>
         </div>
         <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
