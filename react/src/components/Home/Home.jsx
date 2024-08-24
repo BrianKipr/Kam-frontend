@@ -8,14 +8,20 @@ export default function Home() {
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-3/5 md:px-20">
           <div className="h-0 w-0 border-b-[30px] border-l-[20px] border-r-[20px] border-b-black border-l-transparent border-r-transparent" />
           <p className='text-3xl leading-10'>
-            <strong>Welcome to <span className='text-blue-400'>KAM Data Portal</span>.</strong></p>
-            <p className='text-3xl leading-10'> Leverage Data Analytics For Effective Policy Advocacy brought to you by <span className='text-orange-600'><strong>Moringa School</strong></span>.
+            <strong>Welcome to <span className='text-blue-500'>KAM Data Portal</span>.</strong></p>
+            <p className='text-3xl leading-10'> Leverage Data Analytics For Effective Policy Advocacy. Powered by <span className='text-orange-600'><strong>Moringa School</strong></span>.
           </p>
           <a
             href="/login"
-            className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+            className="flex items-center gap-5 self-start rounded-lg hover:bg-blue-500 px-6 py-3 text-sm font-medium hover:text-white transition-colors border border-blue-500 text-blue-500 md:text-base"
           >
             <span>Log in</span>
+          </a>
+          <a
+            href="/register"
+            className="flex items-center gap-5 self-start rounded-lg hover:bg-blue-500 px-6 py-3 text-sm font-medium hover:text-white transition-colors border border-blue-500 text-blue-500 md:text-base"
+          >
+            <span>Register</span>
           </a>
         </div>
         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
