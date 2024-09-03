@@ -6,6 +6,9 @@ const links = [
   { name: 'Summary', href: '/dashboard/' },
   { name: 'Imports', href: '/dashboard/imports' },
   { name: 'Exports', href: '/dashboard/exports' },
+  { name: 'Upload Files', href: '/dashboard/upload' },
+  { name: 'Documentation', href: '/dashboard/docs' },
+
 ];
 
 export default function NavLinks() {
@@ -24,7 +27,7 @@ export default function NavLinks() {
             },
           )}
         >
-          <p className="hidden md:block">{link.name}</p>
+          <p className="mb-4">{link.name}</p>
         </Link>
       ))}
     </>
